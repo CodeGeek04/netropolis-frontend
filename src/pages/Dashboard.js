@@ -47,7 +47,7 @@ function Dashboard({loggedin}){
       async function fetchAllQuests(){
         
         try{
-            const response=await fetch("/Dashboard_quests",{
+            const response=await fetch(`${apiurl}/Dashboard_quests`,{
                 method:"GET",
                 headers:{
                     'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function Dashboard({loggedin}){
         console.log("fetch",state);
         
         try{
-          const response=  await fetch("/Dashboard_quests",{
+          const response=  await fetch(`${apiurl}/Dashboard_quests`,{
                 method:"POST",
                 headers:{
                     'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ function Dashboard({loggedin}){
       }
       const FetchMyQuests=async()=>{
         try{
-            const response=  await fetch("/Dashboard_myquests",{
+            const response=  await fetch(`${apiurl}/Dashboard_myquests`,{
                 method:"GET",
                 headers:{
                     'Content-Type': 'application/json',
